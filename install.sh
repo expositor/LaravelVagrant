@@ -49,7 +49,7 @@ sudo sh -c 'echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.c
 sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/apache2.conf'
 
 # Graceful Restart of Apache
-sudo /etc/init.d/apache2 restart
+/etc/init.d/apache2 reload
 
 # Get Composer
 curl -sS https://getcomposer.org/installer | php
