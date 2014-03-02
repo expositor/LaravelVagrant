@@ -46,6 +46,7 @@ sudo service apache2 restart
 # Apache Configuration
 sudo sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 sudo sh -c 'echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf'
+sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/apache2.conf'
 
 # Graceful Restart of Apache
 sudo /etc/init.d/apache2 restart
