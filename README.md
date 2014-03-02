@@ -27,4 +27,6 @@ composer create-project laravel/laravel --prefer-dist
 Keygen for Git
 ~~~
 ssh-keygen -t rsa -C "lee4runner@hotmail.com"
+cp id_rsa.pub /vagrant
+ssh -T git@github.com
 ~~~
