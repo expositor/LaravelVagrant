@@ -29,12 +29,12 @@ return array(
 	'connections' => array(
 
 		'production' => array(
-			'host'      => '',
-			'username'  => '',
-			'password'  => '',
-			'key'       => '',
+			'host'      => 'app.dev',
+			'username'  => 'root',
+			'password'  => 'root',
+			'key'       => '/home/vagrant/.ssh/authorized_keys',
 			'keyphrase' => '',
-			'root'      => '/var/www',
+			'root'      => '/vagrant',
 		),
 
 	),
