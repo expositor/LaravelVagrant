@@ -50,5 +50,9 @@ sudo mv composer.phar /usr/local/bin/composer
 composer create-project laravel/laravel --prefer-dist
 sudo mv laravel /vagrant
 
+# Aliases
+sudo sh -c 'echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bashrc'
+source ~/.bashrc
+
 # Reboot
 sudo reboot
