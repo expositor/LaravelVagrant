@@ -41,7 +41,10 @@ fi
 dir=$(echo $dir | sed 's/ /\ /g')
 php "${dir}/laravel.phar" $*
 ~~~
-
+Goto project directory and type:
+~~~
+laraval new laravel
+~~~
 <b>Lamp alias to set up Vagrant</b>
 ~~~
 lamp=curl -L -o install.sh https://raw.github.com/expositor/LaravelVagrant/master/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/Vangrantfile && vagrant up
