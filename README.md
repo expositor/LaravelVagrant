@@ -27,6 +27,18 @@ php "%~dp0laravel.phar" %*
 
 Create a file called laravel put:
 
+dir=$(d=$(dirname "$0"); cd "$d" && pwd)
+
+if command -v 'cygpath' >/dev/null 2>&1; then
+
+	if [[ $(which php) == /cygdrive/* ]]; then
+  		dir=$(cygpath -m $dir);
+  	fi
+fi
+
+dir=$(echo $dir | sed 's/ /\ /g')
+php "${dir}/laravel.phar" $*
+
 
 ~~~
 
