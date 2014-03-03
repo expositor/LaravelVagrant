@@ -1,5 +1,5 @@
-Install PHP
-~~~
+<b>Install PHP</b>
+
 In Control Panel window, choose Programs.
 In Programs and Features, choose Turn Windows features on or off.
 Check Internet Information Service and click OK button.
@@ -8,15 +8,15 @@ Run wpilauncher.exe
 In Web Platform Installer window, choose Products tab and search PHP version that we will install.
 Click Add button.
 Click Install button.
-~~~
 
-Install Composer
-~~~
+
+<b>Install Composer</b>
+
 https://getcomposer.org/download/
 Download the Windows Installer
-~~~
 
-Install Laravel
+
+<b>Install Laravel</b>
 
 http://laravel.com/laravel.phar
 Move the laravel.phar folder to C:\ProgramData\ComposerSetup\bin
