@@ -1,7 +1,40 @@
+Install PHP
+~~~
+In Control Panel window, choose Programs.
+In Programs and Features, choose Turn Windows features on or off.
+Check Internet Information Service and click OK button.
+Download Web Platform Installer from http://www.microsoft.com/web/downloads/platform.aspx
+Run wpilauncher.exe
+In Web Platform Installer window, choose Products tab and search PHP version that we will install.
+Click Add button.
+Click Install button.
+~~~
+
+Install Composer
+~~~
+https://getcomposer.org/download/
+Download the Windows Installer
+~~~
+
+Install Laravel
+~~~
+http://laravel.com/laravel.phar
+Move the laravel.phar folder to C:\ProgramData\ComposerSetup\bin
+Create a file called laravel.bat put:
+
+@ECHO OFF
+php "%~dp0laravel.phar" %*
+
+Create a file called laravel put:
+
+
+~~~
+
 Lamp alias to set up Vagrant
 ~~~
 lamp=curl -L -o install.sh https://raw.github.com/expositor/LaravelVagrant/master/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/Vangrantfile && vagrant up
 ~~~
+
 
 Set host redirect
 ~~~
@@ -9,6 +42,7 @@ edit C:\Windows\System32\drivers\etc\hosts
 
 # Vagrant Redirect
 	192.168.33.21 	app.dev
+	192.168.33.21 	laravel.dev
 ~~~
 
 Install PhpMyAdmin
@@ -19,10 +53,6 @@ Include /etc/phpmyadmin/apache.conf
 sudo /etc/init.d/apache2 restart
 ~~~
 
-Laravel
-~~~
-composer create-project laravel/laravel --prefer-dist
-~~~
 
 Keygen for Git
 ~~~
