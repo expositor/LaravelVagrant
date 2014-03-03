@@ -1,24 +1,24 @@
 <b>Install PHP</b>
 
-In Control Panel window, choose Programs.
-In Programs and Features, choose Turn Windows features on or off.
-Check Internet Information Service and click OK button.
-Download Web Platform Installer from http://www.microsoft.com/web/downloads/platform.aspx
-Run wpilauncher.exe
-In Web Platform Installer window, choose Products tab and search PHP version that we will install.
-Click Add button.
+In Control Panel window, choose Programs.<br>
+In Programs and Features, choose Turn Windows features on or off.<br>
+Check Internet Information Service and click OK button.<br>
+Download Web Platform Installer from http://www.microsoft.com/web/downloads/platform.aspx <br>
+Run wpilauncher.exe<br>
+In Web Platform Installer window, choose Products tab and search PHP version that we will install.<br>
+Click Add button.<br>
 Click Install button.
 
 
 <b>Install Composer</b>
 
-https://getcomposer.org/download/
+https://getcomposer.org/download/ <br>
 Download the Windows Installer
 
 
 <b>Install Laravel</b>
 
-http://laravel.com/laravel.phar
+http://laravel.com/laravel.phar<br>
 Move the laravel.phar folder to C:\ProgramData\ComposerSetup\bin
 
 Create a file called laravel.bat put:
@@ -42,18 +42,15 @@ dir=$(echo $dir | sed 's/ /\ /g')
 php "${dir}/laravel.phar" $*
 ~~~
 
-~~~
-
-Lamp alias to set up Vagrant
+<b>Lamp alias to set up Vagrant</b>
 ~~~
 lamp=curl -L -o install.sh https://raw.github.com/expositor/LaravelVagrant/master/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/Vangrantfile && vagrant up
 ~~~
 
 
-Set host redirect
-~~~
+<b>Set host redirect</b><br>
 edit C:\Windows\System32\drivers\etc\hosts
-
+~~~
 # Vagrant Redirect
 	192.168.33.21 	app.dev
 	192.168.33.21 	laravel.dev
