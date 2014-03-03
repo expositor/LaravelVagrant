@@ -17,16 +17,18 @@ Download the Windows Installer
 ~~~
 
 Install Laravel
-~~~
+
 http://laravel.com/laravel.phar
 Move the laravel.phar folder to C:\ProgramData\ComposerSetup\bin
-Create a file called laravel.bat put:
 
+Create a file called laravel.bat put:
+~~~
 @ECHO OFF
 php "%~dp0laravel.phar" %*
+~~~
 
 Create a file called laravel put:
-
+~~~
 dir=$(d=$(dirname "$0"); cd "$d" && pwd)
 
 if command -v 'cygpath' >/dev/null 2>&1; then
@@ -38,7 +40,7 @@ fi
 
 dir=$(echo $dir | sed 's/ /\ /g')
 php "${dir}/laravel.phar" $*
-
+~~~
 
 ~~~
 
