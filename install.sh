@@ -36,10 +36,6 @@ sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.i
 sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
 sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
-# Aliases
-sudo touch ~/.bash_aliases
-source ~/.bashrc
-# echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
 
 # Restart Apache
 sudo service apache2 restart
@@ -49,11 +45,11 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 # Install Laravel
-curl -O laravel.phar http://laravel.com/laravel.phar
-sudo mv laravel.phar /usr/local/bin/laravel
-sudo find /usr/local/bin/laravel -type f -exec chmod 755 {} \;
+#curl -o laravel.phar http://laravel.com/laravel.phar
+#sudo mv laravel.phar /usr/local/bin/laravel
+#sudo find /usr/local/bin/laravel -type f -exec chmod 755 {} \;
 cd /vagrant
-laravel new laravel
+composer create-project laravel/laravel --prefer-dist
 
 # Set Up Laravel
 cd /etc/apache2/sites-available/
@@ -62,3 +58,7 @@ sudo a2ensite laravel
 
 # Reload Apache
 sudo service apache2 reload
+
+# Aliases
+sudo touch ~/.bash_aliases
+# echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
