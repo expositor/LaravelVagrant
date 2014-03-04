@@ -55,6 +55,10 @@ sudo service apache2 restart
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-# Get Laravel
+# Set Up Laravel
+cd /etc/apache2/sites-available/
+curl -L -o laravel.conf https://raw.github.com/expositor/LaravelCustomize/master/remote.php
+sudo a2ensite laravel
+
 # cd /vagrant
 # composer create-project laravel/laravel --prefer-dist
