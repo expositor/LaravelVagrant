@@ -36,6 +36,12 @@ sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.i
 sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
 sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
+# Set Up Node.js and NPM
+sudo apt-get update
+sudo apt-get install -y python-software-properties python g++ make
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install -y nodejs
 
 # Restart Apache
 sudo service apache2 restart
@@ -45,9 +51,6 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 # Install Laravel
-#curl -o laravel.phar http://laravel.com/laravel.phar
-#sudo mv laravel.phar /usr/local/bin/laravel
-#sudo find /usr/local/bin/laravel -type f -exec chmod 755 {} \;
 cd /vagrant
 composer create-project laravel/laravel --prefer-dist
 
@@ -56,9 +59,13 @@ cd /etc/apache2/sites-available/
 curl -L -o laravel.conf https://raw.github.com/expositor/LaravelVagrant/master/laravel.conf
 sudo a2ensite laravel
 
+# Install Bower
+sudo npm install -g bower
+
 # Reload Apache
 sudo service apache2 reload
 
 # Aliases
+cd
 sudo touch ~/.bash_aliases
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
