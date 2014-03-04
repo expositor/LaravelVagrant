@@ -37,7 +37,7 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
 sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
 # Aliases
-sudo nano ~/.bash_aliases
+sudo touch ~/.bash_aliases
 source ~/.bashrc
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
 
