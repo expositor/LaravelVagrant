@@ -62,6 +62,9 @@ sudo a2ensite laravel
 # Install Bower
 sudo npm install -g bower
 
+# Install Grunt
+sudo npm install -g grunt-cli
+
 # Reload Apache
 sudo service apache2 reload
 
