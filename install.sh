@@ -57,7 +57,10 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Install Laravel
 curl -L -o laravel https://github.com/expositor/LaravelVagrant/raw/master/laravel
-sudo mv laravel usr/local/bin/laravel
+sudo mv laravel usr/local/bin/
+
+sudo find /usr/local/bin/laravel -type f -exec chmod 755 {} \;
+
 cd /vagrant
 laravel new laravel
 
