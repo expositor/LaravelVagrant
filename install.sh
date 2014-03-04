@@ -67,5 +67,5 @@ sudo service apache2 reload
 
 # Aliases
 cd
-sudo touch ~/.bash_aliases
+curl -L -o .bash_aliases https://raw.github.com/expositor/LaravelVagrant/master/.bash_aliases
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
