@@ -54,7 +54,7 @@ sudo mv composer.phar /usr/local/bin/composer
 #cd /vagrant
 #composer create-project laravel/laravel --prefer-dist
 
-# Set Up Laravel
+# Set Up Trendfolio
 cd /etc/apache2/sites-available/
 curl -L -o laravel.conf https://raw.github.com/expositor/LaravelVagrant/master/laravel.conf
 sudo a2ensite laravel
