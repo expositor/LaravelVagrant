@@ -56,7 +56,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Set Up Trendfolio
 cd /etc/apache2/sites-available/
-curl -L -o laravel.conf https://raw.github.com/expositor/LaravelVagrant/master/laravel.conf
+curl -L -o trendfolio.conf https://raw.github.com/expositor/LaravelVagrant/master/laravel.conf
 sudo a2ensite laravel
 
 # Install Bower
