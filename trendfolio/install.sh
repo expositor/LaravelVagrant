@@ -51,8 +51,8 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 # Install Laravel
-cd /vagrant
-composer create-project laravel/laravel --prefer-dist
+#cd /vagrant
+#composer create-project laravel/laravel --prefer-dist
 
 # Set Up Laravel
 cd /etc/apache2/sites-available/
