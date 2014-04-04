@@ -18,8 +18,7 @@ sudo add-apt-repository -y ppa:ondrej/php5
 sudo apt-get update
 
 # Install Web Packages
-sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-apcu php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core php5-xdebug
-sudo apt-get install -y phpmyadmin
+sudo apt-get install -y build-essential dkms re2c apache2 php5 php5-dev php-pear php5-apcu php5-json libapache2-mod-php5 php5-curl php5-apcu php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core php5-xdebug  phpmyadmin
 
 # Install xdebug
 cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
