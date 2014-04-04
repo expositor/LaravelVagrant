@@ -8,8 +8,7 @@ curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trend
 edit C:\Windows\System32\drivers\etc\hosts
 ~~~
 # Vagrant Redirect
-	192.168.33.21 	app.dev
-	192.168.33.21 	laravel.dev
+	192.168.33.21 	trendfolio.com
 ~~~
 
 Install PhpMyAdmin
