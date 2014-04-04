@@ -60,10 +60,10 @@ curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/
 sudo a2ensite trendfolio
 
 # Install Bower
-sudo npm install -g bower
+#sudo npm install -g bower
 
 # Install Grunt
-sudo npm install -g grunt-cli
+#sudo npm install -g grunt-cli
 
 # Reload Apache
 sudo service apache2 reload
