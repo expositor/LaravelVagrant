@@ -1,6 +1,6 @@
 <b>Lamp command to set up Vagrant</b>
 ~~~
-curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile
+curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
 ~~~
 
 
