@@ -11,5 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "install.sh"
   config.vm.synced_folder ".", "/var/www", type: "rsync",
     rsync__auto: "true",
+    rsync__args: "--perms",
     rsync__exclude: ".git/"
 end
