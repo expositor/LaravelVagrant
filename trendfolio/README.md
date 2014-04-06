@@ -3,6 +3,11 @@
 curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
 ~~~
 
+Shortened URL
+
+~~~
+curl -L -o install.sh http://goo.gl/TXlrhc && curl -L -o Vagrantfile http://goo.gl/rgI1Fx && vagrant up
+~~~
 
 <b>Set host redirect</b><br>
 edit C:\Windows\System32\drivers\etc\hosts
