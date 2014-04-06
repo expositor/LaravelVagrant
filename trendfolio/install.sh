@@ -31,9 +31,10 @@ EOF
 sudo a2enmod rewrite
 
 # PHP.ini Configuration
-sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
-sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
-sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
+sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
+sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 129M /" /etc/php5/apache2/php.ini
 
 # Set Up Node.js and NPM
 sudo apt-get update
@@ -57,6 +58,7 @@ sudo mv composer.phar /usr/local/bin/composer
 cd /etc/apache2/sites-available/
 curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
 sudo a2ensite trendfolio
+
 
 # Install Bower
 #sudo npm install -g bower
