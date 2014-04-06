@@ -6,7 +6,7 @@ curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trend
 Shortened URL
 
 ~~~
-curl -L -o install.sh http://goo.gl/TXlrhc && curl -L -o Vagrantfile http://goo.gl/rgI1Fx && vagrant up
+curl -L -o install.sh http://goo.gl/TXlrhc && curl -L -o Vagrantfile http://goo.gl/rgI1Fx && vagrant up && vagrant rsync && vagrant rsync-auto
 ~~~
 
 <b>Set host redirect</b><br>
