@@ -34,8 +34,8 @@ sudo a2enmod rewrite
 sudo sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
 sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
 sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
-sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 1024M /" /etc/php5/apache2/php.ini
-sudo sed -i "s/post_max_size = .*/post_max_size = 2048M /" /etc/php5/apache2/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 64M /" /etc/php5/apache2/php.ini
+
 
 # Set Up Node.js and NPM
 sudo apt-get update
