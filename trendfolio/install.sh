@@ -57,7 +57,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 # Set Up Trendfolio
 cd /etc/apache2/sites-available/
-curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
+sudo curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
 sudo a2ensite trendfolio
 
 # Install Bower
