@@ -71,9 +71,9 @@ sudo a2ensite trendfolio
 #sudo npm install -g grunt-cli
 
 # Aliases
-cd
-wget https://raw.github.com/expositor/VagrantFiles/master/.bash_aliases -O .bash_aliases
-source ~/.bashrc
+# cd
+# wget https://raw.github.com/expositor/VagrantFiles/master/.bash_aliases -O .bash_aliases
+# source ~/.bashrc
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
 
 # Install NFS
