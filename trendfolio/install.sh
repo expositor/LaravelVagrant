@@ -38,11 +38,11 @@ sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 64M /" /etc/php5/a
 
 
 # Set Up Node.js and NPM
-sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make
-sudo add-apt-repository -y ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install -y nodejs
+# sudo apt-get update
+# sudo apt-get install -y python-software-properties python g++ make
+# sudo add-apt-repository -y ppa:chris-lea/node.js
+# sudo apt-get update
+# sudo apt-get install -y nodejs
 
 # Restart Apache
 sudo service apache2 restart
@@ -58,6 +58,10 @@ sudo mv composer.phar /usr/local/bin/composer
 # Set Up Trendfolio
 cd /etc/apache2/sites-available/
 sudo curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
+
+# Reload Apache
+sudo service apache2 reload
+
 sudo a2ensite trendfolio
 
 # Install Bower
@@ -66,9 +70,6 @@ sudo a2ensite trendfolio
 # Install Grunt
 #sudo npm install -g grunt-cli
 
-# Reload Apache
-sudo service apache2 reload
-
 # Aliases
 cd
 wget https://raw.github.com/expositor/LaravelVagrant/master/.bash_aliases -O .bash_aliases
@@ -76,4 +77,4 @@ source ~/.bashrc
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
 
 # Install NFS
-sudo apt-get install nfs-common portmap
+# sudo apt-get install nfs-common portmap
