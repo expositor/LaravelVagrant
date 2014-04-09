@@ -1,6 +1,6 @@
 # Get Update
 sudo apt-get update
-sudo apt-get upgrade -y
+
 
 # Install Mysql
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
