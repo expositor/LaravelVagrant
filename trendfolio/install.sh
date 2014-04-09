@@ -60,6 +60,8 @@ cd /etc/apache2/sites-available/
 curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
 sudo a2ensite trendfolio
 
+# Install NFS
+sudo apt-get install nfs-kernel-server
 
 # Install Bower
 #sudo npm install -g bower
