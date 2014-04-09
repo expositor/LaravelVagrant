@@ -78,3 +78,6 @@ source ~/.bashrc
 
 # Install NFS
 # sudo apt-get install nfs-common portmap
+sudo service apache2 reload
+
+
