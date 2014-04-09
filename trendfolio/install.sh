@@ -72,7 +72,7 @@ sudo a2ensite trendfolio
 
 # Aliases
 cd
-wget https://raw.github.com/expositor/LaravelVagrant/master/.bash_aliases -O .bash_aliases
+wget https://raw.github.com/expositor/VagrantFiles/master/.bash_aliases -O .bash_aliases
 source ~/.bashrc
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
 
