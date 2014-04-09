@@ -60,9 +60,6 @@ cd /etc/apache2/sites-available/
 curl -L -o trendfolio.conf https://raw.github.com/expositor/VagrantFiles/master/trendfolio/trendfolio.conf
 sudo a2ensite trendfolio
 
-# Install NFS
-sudo apt-get install nfs-kernel-server
-
 # Install Bower
 #sudo npm install -g bower
 
@@ -77,3 +74,6 @@ cd
 wget https://raw.github.com/expositor/LaravelVagrant/master/.bash_aliases -O .bash_aliases
 source ~/.bashrc
 # echo "alias laravelcustomize='curl -L -o install.sh https://raw.github.com/expositor/LaravelCustomize/master/install.sh && chmod +x install.sh && ./install.sh && rm install.sh'" >> /home/vagrant/.bash_aliases
+
+# Install NFS
+sudo apt-get install nfs-common portmap
