@@ -1,6 +1,5 @@
 # Get Update
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 
 # Install Mysql
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
@@ -19,7 +18,7 @@ sudo add-apt-repository -y ppa:ondrej/php5
 sudo apt-get update
 
 # Install Web Packages
-sudo apt-get install -y build-essential dkms re2c apache2 php5 php5-dev php-pear php5-apcu php5-json libapache2-mod-php5 php5-curl php5-apcu php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core php5-xdebug phpmyadmin nfs-common portmap
+sudo apt-get install -y build-essential dkms re2c apache2 php5 php5-dev php-pear php5-apcu php5-json libapache2-mod-php5 php5-curl php5-apcu php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core php5-xdebug phpmyadmin
 
 # Install xdebug
 cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
