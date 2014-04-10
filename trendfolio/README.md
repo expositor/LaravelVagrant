@@ -1,12 +1,31 @@
-<b>If you have a Box</b>
+<b>Local Box</b>
 ~~~
 vagrant box add --name Ubuntu64 C:\Users\Daniel\Apps\<name of box>.box
 vagrant init <name of box>
 ~~~
 <b>Edit Vagrantfile</b>
+~~~
+25
+26 config.vm.network "private_network", ip: "192.168.33.21"
+27
+~~~
+
+Normal Mount (all platforms)
+~~~
+40
+41 config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=0777", "fmode=666"]
+42
+~~~
 
 
+NFS (Linux and OSX only)
+~~~
+40
+41 config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=0777", "fmode=666"]}
+42
+~~~
 
+~~~
 <b>Command to set up Vagrant</b>
 ~~~
 curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
