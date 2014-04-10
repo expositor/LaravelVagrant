@@ -2,8 +2,10 @@
 ~~~
 vagrant box add --name Ubuntu64 C:\Users\Daniel\Apps\<name of box>.box
 vagrant init <name of box>
-
 ~~~
+<b>Edit Vagrantfile</b>
+
+
 
 <b>Command to set up Vagrant</b>
 ~~~
