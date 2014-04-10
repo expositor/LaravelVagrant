@@ -1,4 +1,4 @@
-<b>Lamp command to set up Vagrant</b>
+<b>command to set up Vagrant</b>
 ~~~
 curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
 ~~~
@@ -16,21 +16,7 @@ edit C:\Windows\System32\drivers\etc\hosts
 	192.168.33.21 	trendfolio.com
 ~~~
 
-Install PhpMyAdmin
-~~~
-sudo apt-get install phpmyadmin
-sudo nano /etc/apache2/apache2.conf
-Include /etc/phpmyadmin/apache.conf
-sudo /etc/init.d/apache2 restart
-~~~
 
-
-Keygen for Git
-~~~
-ssh-keygen -t rsa -C "lee4runner@hotmail.com"
-cp id_rsa.pub /vagrant
-ssh -T git@github.com
-~~~
 <b>Install PHP</b>
 
 In Control Panel window, choose Programs.<br>
