@@ -17,6 +17,12 @@ Normal Mount (all platforms)
 42
 ~~~
 
+Rsync (all platforms)
+~~~
+40
+41 config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=0777", "fmode=666"], type: "rsync",
+42    rsync__exclude: ".git/"
+~~~
 
 NFS (Linux and OSX only)
 ~~~
@@ -25,6 +31,8 @@ NFS (Linux and OSX only)
 42
 ~~~
 
+
+    
 ~~~
 <b>Command to set up Vagrant</b>
 ~~~
