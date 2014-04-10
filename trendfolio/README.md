@@ -7,7 +7,7 @@ C:\Windows\System32\drivers\etc\hosts
 	192.168.33.21 	trendfolio.com
 ~~~
 
-#Local Box
+#Set up Pre-packaged Box
 
 <b>Add local box </b>
 ~~~
@@ -43,7 +43,20 @@ NFS (Linux and OSX only)
 42
 ~~~
 
-#Repository Box
+<b>Start Vagrant</b>
+
+If Rsync
+~~~
+vagrant up
+vagrant rsync-auto
+~~~
+
+If Normal or NFS
+~~~
+vagrant up
+~~~
+
+#Set up Repository Box
     
 <b>Command to set up Vagrant</b>
 ~~~
@@ -54,7 +67,6 @@ Shortened URL
 ~~~
 curl -L -o install.sh http://goo.gl/TXlrhc && curl -L -o Vagrantfile http://goo.gl/rgI1Fx && vagrant up
 ~~~
-
 
 
 <b>Install PHP</b>
