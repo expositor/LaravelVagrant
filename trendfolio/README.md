@@ -1,4 +1,4 @@
-#Host Redirect
+#Hosts Redirect
 
 <b>Edit hosts redirect</b><br>
 C:\Windows\System32\drivers\etc\hosts
