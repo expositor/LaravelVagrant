@@ -1,7 +1,7 @@
 #Host Redirect
 
-<b>Set host redirect</b><br>
-edit C:\Windows\System32\drivers\etc\hosts
+<b>Edit hosts redirect</b><br>
+C:\Windows\System32\drivers\etc\hosts
 ~~~
 # Vagrant Redirect
 	192.168.33.21 	trendfolio.com
