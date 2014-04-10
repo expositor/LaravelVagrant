@@ -1,3 +1,12 @@
+#Host Redirect
+
+<b>Set host redirect</b><br>
+edit C:\Windows\System32\drivers\etc\hosts
+~~~
+# Vagrant Redirect
+	192.168.33.21 	trendfolio.com
+~~~
+
 #Local Box
 
 <b>Add local box </b>
@@ -34,26 +43,18 @@ NFS (Linux and OSX only)
 42
 ~~~
 
-
+#Repository Box
     
-~~~
 <b>Command to set up Vagrant</b>
 ~~~
 curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
 ~~~
 
 Shortened URL
-
 ~~~
 curl -L -o install.sh http://goo.gl/TXlrhc && curl -L -o Vagrantfile http://goo.gl/rgI1Fx && vagrant up
 ~~~
 
-<b>Set host redirect</b><br>
-edit C:\Windows\System32\drivers\etc\hosts
-~~~
-# Vagrant Redirect
-	192.168.33.21 	trendfolio.com
-~~~
 
 
 <b>Install PHP</b>
