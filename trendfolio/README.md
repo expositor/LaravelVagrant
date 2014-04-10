@@ -1,4 +1,11 @@
-<b>command to set up Vagrant</b>
+<b>If you have a Box</b>
+~~~
+vagrant box add --name Ubuntu64 C:\Users\Daniel\Apps\<name of box>.box
+vagrant init <name of box>
+
+~~~
+
+<b>Command to set up Vagrant</b>
 ~~~
 curl -L -o install.sh https://raw.github.com/expositor/VagrantFiles/master/trendfolio/install.sh && curl -L -o Vagrantfile https://raw.github.com/expositor/LaravelVagrant/master/trendfolio/Vangrantfile && vagrant up
 ~~~
