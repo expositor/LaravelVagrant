@@ -18,13 +18,32 @@ server {
 	error_log  /var/log/nginx/localhost.laravel-error.log error;
 
 	error_page 404 /index.php;
+	location /phpmyadmin {
+        root /usr/share/;
+        index index.php index.html index.htm;
+        location ~ ^/phpmyadmin/(.+\.php)$ {
+            try_files $uri =404;
+            root /usr/share/;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+		    include fastcgi_params;
+        }
+        location ~* ^/phpmyadmin/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+            root /usr/share/;
+        }
+    }
+    
+	location /phpMyAdmin {
+        rewrite ^/* /phpmyadmin last;
+    }
+		
 
 	location ~ \.php$ {
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		fastcgi_pass unix:/var/run/php5-fpm.sock;
 		fastcgi_index index.php;
 		include fastcgi_params;
-	}
+	}	
 
 	location ~ /\.ht {
 		deny all;
